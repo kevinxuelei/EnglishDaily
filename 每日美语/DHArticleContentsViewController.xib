@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DHArticleContentsViewController">
+            <connections>
+                <outlet property="playOrPauseBtn" destination="JFJ-j2-TeA" id="njd-B0-osb"/>
+                <outlet property="progressSlider" destination="3fU-Od-rgP" id="WJN-aT-WwY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="jBa-Ms-ous" id="0HD-eV-zcn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3fU-Od-rgP">
+                    <rect key="frame" x="8" y="510" width="584" height="31"/>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-j2-TeA">
+                    <rect key="frame" x="280" y="550" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1Fm-z7-gMP"/>
+                        <constraint firstAttribute="height" constant="40" id="78J-3Z-Hz4"/>
+                        <constraint firstAttribute="width" constant="40" id="ucA-mY-rvV"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icon_play_press.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="icon_pause_press.png"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="78J-3Z-Hz4"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="9Gm-ts-maG"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBa-Ms-ous">
+                    <rect key="frame" x="10" y="10" width="580" height="490"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JFJ-j2-TeA" firstAttribute="top" secondItem="3fU-Od-rgP" secondAttribute="bottom" constant="10" id="1Oj-G5-8af"/>
+                <constraint firstAttribute="bottom" secondItem="3fU-Od-rgP" secondAttribute="bottom" constant="60" id="4JW-YL-l0d"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="centerX" secondItem="JFJ-j2-TeA" secondAttribute="centerX" id="8FI-EV-cJD"/>
+                <constraint firstItem="JFJ-j2-TeA" firstAttribute="top" secondItem="3fU-Od-rgP" secondAttribute="bottom" constant="10" id="8RE-Rc-Jtc"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="centerY" secondItem="JFJ-j2-TeA" secondAttribute="centerY" id="9Ft-NK-mxJ"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="top" secondItem="jBa-Ms-ous" secondAttribute="bottom" constant="10" id="E1M-is-Xfv"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="E9Y-Z0-KYj"/>
+                <constraint firstItem="jBa-Ms-ous" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="FMB-dQ-vBC"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="top" secondItem="jBa-Ms-ous" secondAttribute="bottom" constant="10" id="Ggv-Ed-reZ"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="top" secondItem="jBa-Ms-ous" secondAttribute="bottom" constant="10" id="IOr-ID-CXV"/>
+                <constraint firstAttribute="trailing" secondItem="jBa-Ms-ous" secondAttribute="trailing" constant="10" id="Iui-wb-ywt"/>
+                <constraint firstItem="JFJ-j2-TeA" firstAttribute="top" secondItem="3fU-Od-rgP" secondAttribute="bottom" constant="10" id="MGb-5b-gCs"/>
+                <constraint firstAttribute="bottom" secondItem="JFJ-j2-TeA" secondAttribute="bottom" constant="10" id="NKr-Rw-86m"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="QsB-Ih-xmP"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="top" secondItem="jBa-Ms-ous" secondAttribute="bottom" constant="8" id="WKW-B3-jFV"/>
+                <constraint firstAttribute="trailing" secondItem="3fU-Od-rgP" secondAttribute="trailing" constant="10" id="fco-JG-zGL"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="centerX" secondItem="jBa-Ms-ous" secondAttribute="centerX" id="jAJ-ts-fYW"/>
+                <constraint firstItem="jBa-Ms-ous" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qZt-Z6-wsD"/>
+                <constraint firstItem="JFJ-j2-TeA" firstAttribute="top" secondItem="3fU-Od-rgP" secondAttribute="bottom" constant="10" id="uAW-GW-15f"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="w0b-aO-Rgi"/>
+                <constraint firstAttribute="bottom" secondItem="JFJ-j2-TeA" secondAttribute="bottom" constant="10" id="x5L-c9-Js2"/>
+                <constraint firstItem="3fU-Od-rgP" firstAttribute="centerY" secondItem="JFJ-j2-TeA" secondAttribute="centerY" id="yCj-i9-PG0"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4JW-YL-l0d"/>
+                    <exclude reference="9Ft-NK-mxJ"/>
+                    <exclude reference="E1M-is-Xfv"/>
+                    <exclude reference="E9Y-Z0-KYj"/>
+                    <exclude reference="WKW-B3-jFV"/>
+                    <exclude reference="w0b-aO-Rgi"/>
+                    <exclude reference="yCj-i9-PG0"/>
+                    <exclude reference="1Oj-G5-8af"/>
+                    <exclude reference="MGb-5b-gCs"/>
+                    <exclude reference="x5L-c9-Js2"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="413" y="370"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_pause_press.png" width="72" height="72"/>
+        <image name="icon_play_press.png" width="72" height="72"/>
+    </resources>
+</document>
